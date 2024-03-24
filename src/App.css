@@ -1,0 +1,184 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+body {
+  font-family: Roboto;
+}
+
+#logo {
+  font-family: "Poltawski Nowy", serif;
+}
+
+#banner {
+  background-image: url('../public/cachoeira.jpg');
+  background-size: cover;
+   background-repeat: no-repeat;
+  background-position: center;
+}
+
+#secondBanner {
+  background-image: url('https://images.pexels.com/photos/954929/pexels-photo-954929.jpeg?auto=compress&cs=tinysrgb&w=1200" className="w-20 h-20 rounded-full object-cover description-img');
+  background-size: 200px 200px;
+   background-repeat: repeat;
+  background-position: center;
+}
+
+.in-shadow {
+  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 #000000;
+  font-family: "Cinzel Decorative", serif;
+}
+
+.grid-forms {
+  margin-top: 1.5rem;
+  display: grid;
+  gap: 12px;
+  grid-template-areas:
+    "name"
+    "email"
+    "phone"
+    "message";
+}
+
+#input-name {
+  grid-area: name;
+}
+
+#input-email{
+  grid-area: email;
+}
+
+#input-phone {
+  grid-area: phone;
+}
+
+#input-message {
+  grid-area: message;
+}
+
+
+@media (max-width: 959px) {
+  #menu-header {
+    display: none;
+    justify-content: flex-end;
+    width: 30%;
+  }
+}
+
+@media (min-width: 960px) {
+
+  #cards-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+    grid-template-rows: repeat(2, 1fr) !important;
+    max-width: 960px;
+  }
+  
+  .in-shadow {
+    margin-top: 50px;
+  }
+
+  .description-title {
+    font-size: 3rem;
+  }
+
+  .description-img {
+    width: 128px;
+    height: 128px;
+  }
+
+  .description-container-card {
+    width: 70%;
+  }
+
+
+.grid-forms {
+  width: 960px;
+  grid-template-columns: 2fr 1fr;
+  grid-template-areas: 
+    "name name"
+    "email phone"
+    "message message";
+}  
+  
+  
+}
+
+@media (min-width: 500px) {
+  .footer-option {
+    font-size: 1rem;
+    gap: 2rem;
+  }
+}
+@media (min-width: 600px) {
+  #card-title {
+    font-size: 3.75rem;
+  }
+
+  #card-text {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+  }
+
+  #cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+
+  #input-message {
+    height: 114px;
+  }
+
+  #container-button-forms {
+    justify-content: flex-end;
+    max-width: 960px;
+  }
+
+  #button-forms {
+    width: 84px;
+    padding: 6px 16px;
+  }
+
+  #title-forms {
+    font-size: 3rem;
+    margin-bottom: 10px;
+  }
+}
+
+@media (min-width: 800px) {
+  #secondBanner, #secondBannerContainer {
+    background-image: url('https://images.pexels.com/photos/2413230/pexels-photo-2413230.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2') !important;
+  }
+
+  #titleBanner {
+    color: white!important;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.8);
+  }
+
+  #buttonBanner {
+    border-color: white!important;
+    color: white!important;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.8);
+  }
+
+  #buttonBanner:hover {
+    background-color: rgb(54 83 20);
+  }
+}
+
+@media (max-width: 500px) {
+  .mensagem-agradecimento {
+    height: auto;
+    padding: 8px;
+    text-align: center;
+  }
+
+  .memorie {
+    font-size: 0.8rem;
+  }
+}
+
